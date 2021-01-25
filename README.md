@@ -1,24 +1,65 @@
 # README
+# README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+### ユーザー管理機能情報(user)
+|        Column        |   Type  |         Options                      |
+| -------------------- | ------- | ------------------------------------ |
+| nickname             | string  | null: false                          |
+| encrypted_password   | string  | null: false,default: ""              |
+| first_name           | string  | null: false                          |
+| last_name            | string  | null: false                          |
+| first_name_kana      | string  | null: false                          |
+| last_name_kana       | string  | null: false                          |
 
-Things you may want to cover:
+# Association
+has_many: room_user
+has_many: rooms,through:room_user
+has_many: memos
 
-* Ruby version
 
-* System dependencies
+###　中間テーブル機能情報(room_user)
+| Column |   Type    |            Options           |
+| ------ | --------- | ---------------------------- |
+| user   | reference | null:false,foreign_key: true |
+| room   | reference | null:false,foreign_key: true |
 
-* Configuration
+# Association
+belongs_to: user
+belongs_to: room
 
-* Database creation
 
-* Database initialization
+### ルーム情報(room)
+|     Column      |    Type   |            Options           |
+| --------------- | --------- | ---------------------------- |
+| context         | string    | null: false                  |
 
-* How to run the test suite
+# Association
+has_many: room_user
+has_many: users,through:room_user
+has_many: memos
 
-* Services (job queues, cache servers, search engines, etc.)
 
-* Deployment instructions
+###　メモ情報(memo)
+|     Column      |    Type   |            Options           |
+| --------------- | --------- | ---------------------------- |
+| context         | string    | null: false                  |
+| user            | reference | foreign_key: true            |
+| room            | reference | null:false,foreign_key: true |
 
-* ...
+# Association
+belongs_to: user
+belongs_to: room
+has_one_attached: image
+
+
+###　スケジュール情報(schedule)
+|     Column      |   Type    |      Options      |
+| --------------- | --------- | ----------------- |
+| day             | string    | null: false       |
+| hour            | integer   | null: false       |
+| mitites 　　     | string    | null: false       |
+| title           | string    | null: false       |
+| text            | string    |                   |
+
+# Association
+belongs_to: user
