@@ -55,6 +55,7 @@
     float: right;
     display: flex;
     font-size: 25px;
+    color: #FFA500;
 }
 
 li {
@@ -63,12 +64,16 @@ li {
     text-decoration: none;
 }
 
-.logo, .greet, .li {
+.logo, .greet {
+    color: #FFA500;
+}
+
+#link-content {
+    text-decoration: none;
     color: #FFA500;
 }
 
 .wrapper {
-    
     display: flex;
     justify-content: space-between;
 }
@@ -78,18 +83,14 @@ li {
 }
 
 .left-side {
-    /* background-color: red; */
     width: 200px;
 }
 
 .main-memo {
     width: calc(100vw - 650px);
-    /* border-right: solid 2px;
-    border-left: solid 2px; */
 }
 
 .memo-area {
-    /* background-color: yellow; */
     height: calc(100vh - 120px);
 }
 
@@ -129,13 +130,11 @@ li {
 .calendar {
     height: 50%;
     width: 100%;
-    /* background-color: pink; */
 }
 
 .schedule {
     height: 50%;
     width: 100%;
-    /* background-color: green; */
 }
 
 .box25{

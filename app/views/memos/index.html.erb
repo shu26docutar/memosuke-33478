@@ -18,23 +18,14 @@
 <%
 =end%>
 
-    <div class="greet">
-    <%# ログイン中ユーザーの名前の設定 %>
-        hello.
-    </div>
-
     <ul class='user-lists'>
-      <%# if user_signed_in? %>
-      <%
-=begin%>
- <li ><%= link_to "", "#", class: "user-nickname"  %></li>
-      <li ><%= link_to 'ログアウト', "", method: :delete, class: "logout"  %></li> 
-<%
-=end%>
-      <%# else %>
-      <li ><%= link_to 'Log In', new_user_session_path, class: "login" %></li>
-      <li ><%= link_to 'Sign In', new_user_registration_path, class: "sign-up" %></li>
-      <%# end %>
+        <%if user_signed_in? %>
+            <li >hello. <%= link_to current_user.nickname, "#", class: "user-nickname", id: "link-content"  %></li>
+            <li ><%= link_to 'Log Out', destroy_user_session_path, method: :delete, class: "logout", id: "link-content"  %></li> 
+        <% else %>
+            <li ><%= link_to 'Log In', new_user_session_path, class: "login", id: "link-content" %></li>
+            <li ><%= link_to 'Sign In', new_user_registration_path, class: "sign-up", id: "link-content" %></li>
+        <% end %>
     </ul>
 </div>
 
