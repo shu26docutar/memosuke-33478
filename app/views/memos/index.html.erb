@@ -1,0 +1,51 @@
+<div class="header">
+    <div class="logo">
+        MemoSuke
+    </div>
+
+        <%
+=begin%>
+ <div class="search-bar-contents">
+            <form class="search-form" action="#">
+                <input class='input-box' placeholder='キーワードから探す'>
+                <button class="search-btn">
+                    <span class="material-icons">
+                        search
+                    </span>
+                </button>
+            </form>
+        </div> 
+<%
+=end%>
+
+    <div class="greet">
+    <%# ログイン中ユーザーの名前の設定 %>
+        hello.
+    </div>
+
+    <ul class='user-lists'>
+      <%# if user_signed_in? %>
+      <%
+=begin%>
+ <li ><%= link_to "", "#", class: "user-nickname"  %></li>
+      <li ><%= link_to 'ログアウト', "", method: :delete, class: "logout"  %></li> 
+<%
+=end%>
+      <%# else %>
+      <li ><%= link_to 'Log In', "", class: "login" %></li>
+      <li ><%= link_to 'Sign In', "", class: "sign-up" %></li>
+      <%# end %>
+    </ul>
+</div>
+
+<div class="wrapper">
+    <div class="left-side">
+        <%= render "left_side_bar" %>
+    </div>
+    <div class="main-memo">
+        <%= render "main_memo" %>
+    </div>
+    <div class="right-side">
+        <%= render "right_side_bar" %>
+    </div>
+</div>
