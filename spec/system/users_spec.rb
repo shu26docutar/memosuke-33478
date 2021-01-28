@@ -48,13 +48,13 @@ RSpec.describe "Users", type: :system do
 
   context 'ユーザー新規登録ができないとき' do
     it '誤った情報ではユーザー新規登録ができずに新規登録ページへ戻ってくる' do
-      # トップページに移動する
+
       visit root_path
-      # トップページにサインアップページへ遷移するボタンがあることを確認する
+
       expect(page).to have_content('Log In')
-      # 新規登録ページへ移動する
+
       visit new_user_registration_path
-      # ユーザー情報を入力する
+
       fill_in 'Nickname', with: " "
 
       fill_in 'Email', with: " "
@@ -70,11 +70,11 @@ RSpec.describe "Users", type: :system do
       fill_in "First name kana",	with: " "
 
       fill_in "Last name kana",	with: " "
-      # サインアップボタンを押してもユーザーモデルのカウントは上がらないことを確認する
+
       expect{
         find('input[name="commit"]').click
       }.to change { User.count }.by(0)
-      # 新規登録ページへ戻されることを確認する
+
       expect(current_path).to eq "/users"
     end
   end
