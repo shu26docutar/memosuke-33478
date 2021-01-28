@@ -20,4 +20,8 @@ class User < ApplicationRecord
   with_options presence: true do
     validates :nickname
   end
+
+  has_many :room_users
+  has_many :rooms, through: :room_users
+  has_many :memos
 end
