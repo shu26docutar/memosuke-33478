@@ -1,0 +1,37 @@
+<div class='memo-room-form'>
+  <div class="top-memo-room">
+    <div class="room-cancel-btn">
+      <%= link_to root_path do %>
+        <span class="material-icons", id="clear">
+          clear
+        </span>
+      <% end %>
+    </div>
+  </div>
+
+  <div class="post-memo">
+    <div class="post-logo">
+      memosuke
+    </div>
+
+    <div class="bottom-section">
+      <%=form_with model: @room, local: true do |f|%>
+        <div class='chat-room-form__field'>
+          <div class='chat-room-form__field--left'>
+            <%= f.label :チャットルーム名, class: 'chat-room-form__label'%>
+          </div>
+
+          <div class='chat-room-form__field--right'>
+            <%= f.text_field :name, class: 'chat__room_name chat-room-form__input', placeholder: 'ルーム名を入力してください'%>
+          </div>
+        </div>
+
+        <div class='chat-room-form__field'>
+          <div class='chat-room-create'>
+            <%= f.submit class: 'chat-room-form__action-btn'%>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
