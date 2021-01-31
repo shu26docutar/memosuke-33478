@@ -41,7 +41,7 @@ html {
 .logo {
     font-family: STXingkaiSC-Light;
     font-weight: bold;
-    font-size: 35px;
+    font-size: 40px;
     display: inline;
     padding:  0  0 20px 20px;
 }
@@ -71,6 +71,8 @@ li {
 }
 
 #link-content {
+    margin-right: 20px;
+    font-size: 40px;
     text-decoration: none;
     color: #FFA500;
 }
