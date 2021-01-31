@@ -1,6 +1,9 @@
 <%# ルーム作成時の戻り値 %>
+
 <div class="room_area">
     <% @rooms.each do |room| %>
-        <%= room.name %>
+        <div class="rooms">
+            <%= link_to room.name, room_memos_path(room), id: "room-name"%>
+        </div>
     <% end %>
 </div>

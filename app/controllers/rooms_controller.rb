@@ -2,7 +2,7 @@ class RoomsController < ApplicationController
     
     def create
         @room = Room.create(room_params)
-        @rooms = Room.all
+        @rooms = Room.all.order(id: "DESC")
     end
 
     def destroy

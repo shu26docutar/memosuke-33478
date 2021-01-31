@@ -19,6 +19,12 @@
 }
 
 .room {
+    font-size: 30px;
     text-align: center;
     display: inline-block;
+}
+
+#room-name {
+    text-decoration: none;
+    color: #FFA500;
 }
