@@ -1,7 +1,23 @@
-<div class="rooms">
-    <div class="">
-        <span class="material-icons">
-        add
-        </span>
+<%
+=begin%>
+ <div class="rooms">
+    <div class="add-btn">
+        <%= link_to new_room_path do %>
+        <span class='material-icons'>add</span>
+        <% end %>
     </div>
+</div> 
+<%
+=end%>
+
+<div class="rooms">
+  <div id="room-form">
+    <%= render partial: 'rooms/form', locals: { room: @room } %>
+  </div>
+
+  <div class="room">
+    <div id="room">
+      <%= render "rooms/room", {rooms: @rooms} %>
+    </div>  
+  </div>
 </div>

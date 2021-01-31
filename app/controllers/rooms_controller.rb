@@ -1,20 +1,8 @@
 class RoomsController < ApplicationController
-
-    def new
-        @room = Room.new
-        @rooms = Room.all.order(id: "DESC")
-    end
-    
     
     def create
-        @room = Room.new(room_params)
-        respond_to do |format|
-            if @room.save
-                format.js
-            else
-                format.js { head :no_content}
-            end
-        end
+        @room = Room.create(room_params)
+        @rooms = Room.all
     end
 
     def destroy

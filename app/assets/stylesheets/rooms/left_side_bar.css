@@ -1,0 +1,24 @@
+.rooms {
+    height: 100%;
+    width: 100%;
+    padding: 5px;
+}
+
+.room-form {
+    display: flex;
+}
+
+.form {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+}
+
+#name {
+    width: 100px;
+}
+
+.room {
+    text-align: center;
+    display: inline-block;
+}

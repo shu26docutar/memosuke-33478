@@ -29,6 +29,7 @@
         <div class='chat-room-form__field'>
           <div class='chat-room-create'>
             <%= f.submit class: 'chat-room-form__action-btn'%>
+            <input name="room[user_id]" type="hidden" value=<%= current_user.id %>>
           </div>
         </div>
       <% end %>
