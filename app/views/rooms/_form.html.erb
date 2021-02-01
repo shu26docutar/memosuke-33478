@@ -1,6 +1,6 @@
 
     <%= form_with(model: @room, id: "room-form") do |form| %>
-        <div class="form">
+        <div  class="form", name="room[user_ids][]">
             <%= form.text_field :name, id: "name" %>
             <%= form.submit '作成', id: "submit" %>
         </div>
