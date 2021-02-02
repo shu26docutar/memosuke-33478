@@ -1,0 +1,55 @@
+/* shared */
+
+
+
+/* end */
+
+#clear {
+    font-size: 50px;
+    float: right;
+}
+
+.post-logo {
+    font-size: 120px;
+    margin: 50px 50px 20px 50px ;
+    padding:  0  0 20px 20px;
+    font-family: STXingkaiSC-Light;
+    display: inline;
+    color: #FFA500;
+}
+
+.post-memo {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.bottom-section {
+    height: 100%;
+    width: 50%;
+    border-radius: 10px;
+    color: #FFA500;
+    font-family: Chalkboard;
+    border: solid 2px #AAAAAA;
+}
+
+.chat-room-form__field {
+    margin: 20px;
+}
+
+.chat-room-form__label {
+    font-size: 30px;
+}
+
+.chat__room_name {
+    height: 50px;
+    width: 300px;
+    text-align: center;
+}
+
+.chat-room-form__action-btn {
+    height: 40px;
+    width: 200px;
+    font-size: 25px;
+}

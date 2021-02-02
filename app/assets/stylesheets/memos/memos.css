@@ -1,3 +1,7 @@
+html {
+    background-color: #FFFAF0;
+}
+
 .header {
     height: 60px;
     width: 100%;
@@ -5,10 +9,6 @@
     font-family: Chalkboard;
     display: flex;
     justify-content: space-between;
-}
-
-.logo {
-    font-family: STXingkaiSC-Light;
 }
 
 .search-bar-contents {
@@ -39,7 +39,9 @@
 }
 
 .logo {
-    font-size: 35px;
+    font-family: STXingkaiSC-Light;
+    font-weight: bold;
+    font-size: 40px;
     display: inline;
     padding:  0  0 20px 20px;
 }
@@ -69,6 +71,8 @@ li {
 }
 
 #link-content {
+    margin-right: 20px;
+    font-size: 40px;
     text-decoration: none;
     color: #FFA500;
 }
