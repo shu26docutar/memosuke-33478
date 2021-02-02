@@ -1,3 +1,8 @@
-<div class="boz25">
-    <%= memo.content %>
+
+<div class="memo_area">
+    <% @memos.each do |memo| %>
+        <div class="boz25">
+            <%= memo.content %>
+        </div>
+    <% end %>
 </div>

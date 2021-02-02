@@ -1,4 +1,10 @@
 class RoomsController < ApplicationController
+    def index
+        @memo = Memo.new
+        @room = Room.new
+        @rooms = Room.all
+    end
+    
     
     def create
         @room = Room.create(room_params)
