@@ -1,8 +1,19 @@
 
-<div class="memo_area">
-    <% @memos.each do |memo| %>
-        <div class="boz25">
-            <%= memo.content %>
-        </div>
-    <% end %>
+<div class="memo">
+　<div class="upper-memo">
+    <div class="memo-user">
+    　<!-- 投稿したユーザー名情報を出力する -->
+        <%= memo.name %>
+    </div>
+    <div class="memo-date">
+    　<!-- 投稿した時刻を出力する -->
+        <%= l memo.user.created_at %>
+    </div>
+　</div>
+　<div class="lower-memo">
+    <div class="memo-content">
+    　<!-- 投稿したメッセージ内容を記述する -->
+        <%= memo.content %>
+    </div>
+  </div>
 </div>
